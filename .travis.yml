@@ -7,4 +7,4 @@ before_install:
   - docker build -t vpryshchepa/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run vpryshchepa/docker-react npm run test -- --coverage
+  - docker run -e CI=true vpryshchepa/docker-react npm run test -- --coverage
